@@ -3,6 +3,9 @@
 
 
 import requests
+import schedule
+import time
+
 
 def ping(url):
     r = requests.get(url)
