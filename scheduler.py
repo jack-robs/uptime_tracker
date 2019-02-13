@@ -8,15 +8,17 @@ import time
 url = 'https://news.ycombinator.com'
 filename = 'status_codes.csv'
 
+while True:
+    time.sleep(5)
+    status = ping(url)
+    now = datetime.datetime.now()
+    current_time = now.isoformat()
 
-status = ping(url)
-now = datetime.datetime.now()
-time = now.isoformat()
+    with open(filename, 'a') as newFile:
+        newFileWriter = csv.writer(newFile)
+        newFileWriter.writerow([status, current_time])
+        
 
-with open(filename, 'a') as newFile:
-    newFileWriter = csv.writer(newFile)
-    newFileWriter.writerow([status,time])
-
-print(status, time)
+#    print(status, current_time)
 
 
