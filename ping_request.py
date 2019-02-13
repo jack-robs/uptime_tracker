@@ -3,13 +3,6 @@
 
 
 import requests
-import datetime
-import csv 
-
-
-url = 'https://news.ycombinator.com'
-filename = 'status_codes.csv'
-
 
 def ping(url):
     #   Ping url and get status code, return code
@@ -19,18 +12,4 @@ def ping(url):
    
 #set url to ping, print status code
 
-status = ping(url)
-now = datetime.datetime.now()
-time = now.isoformat()
-
-with open(filename, 'a') as newFile:
-    newFileWriter = csv.writer(newFile)
-    newFileWriter.writerow([status,time])
-
-print(status, time)
-
-
-
-
-#write to csv
 
