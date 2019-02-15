@@ -21,19 +21,3 @@ ani = animation.FuncAnimation(fig, animate, interval=1000)
 plt.show()
 
 
-'''
-headers = ['status', 'DTG']
-data = pd.read_csv('status_codes.csv', names=headers)
-print(data)
-
-x = data['DTG']
-y = data['status']
-
-#plot
-while True:
-    time.sleep(5)
-    plt.scatter(x, y, s = 100)
-    plt.axis([0, 500,:
-    plt.show()
-    plt.pause(0.0001)
-'''  
