@@ -10,8 +10,18 @@ fig = plt.figure()
 ax1 = fig.add_subplot(1,1,1)
 
 def animate(i):
+    headers = ['status', 'DTG']
+    data = pd.read_csv('status_codes.csv', names=headers)
+    x = data['DTG']
+    y = data['status']
+    ax1.clear()
+    ax1.plot(x, y)
+
+ani = animation.FuncAnimation(fig, animate, interval=1000)
+plt.show()
 
 
+'''
 headers = ['status', 'DTG']
 data = pd.read_csv('status_codes.csv', names=headers)
 print(data)
@@ -26,4 +36,4 @@ while True:
     plt.axis([0, 500,:
     plt.show()
     plt.pause(0.0001)
-    
+'''  
