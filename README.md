@@ -8,7 +8,9 @@ Runs in background, currently every 5 seconds
 
 run with:
 
-'''
+```
 $ python3 scheduler.py &
+```
+```
 $ python3 grapher.py &
-'''
+```
