@@ -5,3 +5,10 @@ This app will ping a healthcheck endpoint with scheduler.py, append result/time 
 pygal or matplotlib or similar, produce an uptime chart. 
 
 Runs in background, currently every 5 seconds
+
+run with:
+
+'''
+$ python3 scheduler.py &
+$ python3 grapher.py &
+'''
